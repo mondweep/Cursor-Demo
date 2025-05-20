@@ -1,0 +1,46 @@
+# SPARC Development Rules for Auto-Analyst
+
+## Core Philosophy
+1. **Simplicity**: Clear, maintainable solutions
+2. **Iteration**: Enhance existing code unless fundamental changes are needed
+3. **Focus**: Strict task adherence, avoid scope creep
+4. **Quality**: Clean, tested, documented, secure outcomes
+5. **Collaboration**: Effective human-AI teamwork
+
+## SPARC Workflow
+1. **Specification**: Define objectives, requirements, scenarios, acceptance criteria
+2. **Pseudocode**: Map implementation pathways
+3. **Architecture**: Design modular components
+4. **Refinement**: TDD, debugging, security, optimization
+5. **Completion**: Integration, documentation, verification
+
+## Code Quality Rules
+- File ≤ 500 lines, functions ≤ 50 lines
+- No hard-coded secrets, validate inputs, proper error handling
+- Follow DRY, SOLID, Clean Code principles
+- Design for testability
+
+## TDD Workflow (London School)
+1. Red: Write failing tests first
+2. Green: Minimal implementation
+3. Refactor: Clean up with test coverage
+
+## Architectural Principles
+- Clear component boundaries and interfaces
+- Traceable data flows
+- Single responsibility services
+
+## UI/UX Design
+- Visual hierarchy and accessibility
+- Intuitive interactions
+- Responsive design
+- Performance optimization
+- User feedback mechanisms
+
+## Repository Bootstrapping
+1. Analysis of source repository
+2. Modular adaptation
+3. Progressive enhancement
+4. Comprehensive documentation
+5. Testing strategy
+6. Dependency management

@@ -1,0 +1,174 @@
+# SPARC Development Rules for Bootstrapped Application
+
+## Core Philosophy
+
+1. **Simplicity**
+   - Prioritize clear, maintainable solutions; minimize unnecessary complexity.
+
+2. **Iteration**
+   - Enhance existing code unless fundamental changes are clearly justified.
+
+3. **Focus**
+   - Stick strictly to defined tasks; avoid unrelated scope changes.
+
+4. **Quality**
+   - Deliver clean, well-tested, documented, and secure outcomes through structured workflows.
+
+5. **Collaboration**
+   - Foster effective teamwork between human developers and autonomous agents.
+
+## Development Workflow (SPARC)
+
+1. **Specification**
+   - Define clear objectives, requirements, user scenarios, and acceptance criteria.
+   - Never hard-code environment variables or credentials.
+
+2. **Pseudocode**
+   - Map out logical implementation pathways before coding.
+   - Identify core functions, data structures, and algorithms.
+
+3. **Architecture**
+   - Design modular components with clear boundaries and interfaces.
+   - Establish proper separation of concerns.
+
+4. **Refinement**
+   - Implement with TDD, debugging, security checks, and optimization.
+   - Refactor for maintainability.
+
+5. **Completion**
+   - Integrate, document, test, and verify against acceptance criteria.
+
+## Code Quality Rules
+
+1. **File & Function Limits**
+   - Every file ≤ 500 lines
+   - Every function ≤ 50 lines with clear single responsibility
+
+2. **Security Essentials**
+   - No hard-coded secrets, credentials, or environment variables
+   - All user inputs must be validated and sanitized
+   - Proper error handling in all code paths
+   - Security vulnerabilities must be proactively prevented
+
+3. **Best Practices**
+   - **DRY (Don't Repeat Yourself)**: Eliminate code duplication
+   - **SOLID Principles**: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
+   - **Clean Code**: Descriptive naming, consistent formatting, minimal nesting
+   - **Testability**: Design for unit testing with dependency injection
+
+## TDD Workflow (London School)
+
+1. **Red**: Write failing tests first (outside-in development)
+2. **Green**: Implement minimal code to make tests pass
+3. **Refactor**: Clean up code while maintaining test coverage
+
+Non-Negotiable Requirements:
+- Tests MUST be written before implementation code
+- Implementation MUST be minimal to pass tests
+- Mocks/stubs MUST be used for dependencies
+- Test doubles MUST verify collaboration, not just state
+
+## Architectural Principles
+
+1. **Component Boundaries**
+   - Every component must have clearly defined responsibilities
+   - All interfaces must be explicitly documented
+   - System boundaries must be established with proper access controls
+
+2. **Data Flows**
+   - Data flows must be traceable through the system
+   - Clear data ownership and consistency models
+   - Security and privacy considerations addressed at design level
+
+3. **Service Design**
+   - Each service should have a single, well-defined responsibility
+   - Services should own their data and expose it through well-defined interfaces
+   - Define clear contracts for service interactions (APIs, events, messages)
+
+## UI/UX Design Principles
+
+### Visual Design
+- Establish a clear visual hierarchy to guide user attention
+- Choose a cohesive color palette that reflects the brand
+- Use typography effectively for readability and emphasis
+- Maintain sufficient contrast for legibility (WCAG 2.1 AA standard)
+- Design with a consistent style across the application
+
+### Interaction Design
+- Create intuitive navigation patterns
+- Use familiar UI components to reduce cognitive load
+- Provide clear calls-to-action to guide user behavior
+- Implement responsive design for cross-device compatibility
+- Use animations judiciously to enhance user experience
+
+### Accessibility
+- Follow WCAG guidelines for web accessibility
+- Use semantic HTML to enhance screen reader compatibility
+- Provide alternative text for images and non-text content
+- Ensure keyboard navigability for all interactive elements
+- Test with various assistive technologies
+
+### Responsive Design
+- Use relative units (%, em, rem) instead of fixed pixels
+- Implement CSS Grid and Flexbox for flexible layouts
+- Design with a mobile-first approach, then scale up
+- Use media queries to adjust layouts for different screen sizes
+- Ensure touch targets are large enough (min 44x44 pixels)
+- Optimize assets for faster loading on mobile networks
+
+### Performance Optimization
+- Optimize images and assets to minimize load times
+- Implement lazy loading for non-critical resources
+- Use code splitting to improve initial load performance
+- Monitor and optimize Core Web Vitals (LCP, FID, CLS)
+- Implement critical CSS for above-the-fold content
+
+### User Feedback
+- Incorporate clear feedback mechanisms for user actions
+- Use loading indicators for asynchronous operations
+- Provide clear error messages and recovery options
+- Implement analytics to track user behavior and pain points
+
+### Information Architecture
+- Organize content logically to facilitate easy access
+- Use clear labeling and categorization for navigation
+- Implement effective search functionality
+- Create a sitemap to visualize overall structure
+
+### Testing and Iteration
+- Conduct A/B testing for critical design decisions
+- Use heatmaps and session recordings to analyze user behavior
+- Regularly gather and incorporate user feedback
+- Continuously iterate on designs based on data and feedback
+
+## Repository Bootstrapping Guidelines
+
+1. **Analysis**
+   - Thoroughly analyze the open source repository structure before bootstrapping
+   - Identify core components, dependencies, and architecture patterns
+   - Document the repository's strengths and potential improvement areas
+
+2. **Modular Adaptation**
+   - Adapt components modularly rather than monolithically
+   - Preserve successful architectural patterns from the source repository
+   - Refactor problematic areas using SOLID principles
+
+3. **Progressive Enhancement**
+   - Start with a minimal viable implementation
+   - Add features progressively with continuous testing
+   - Maintain backward compatibility where possible
+
+4. **Documentation**
+   - Create comprehensive documentation for the bootstrapped solution
+   - Document architectural decisions and trade-offs
+   - Provide clear usage examples and API references
+
+5. **Testing Strategy**
+   - Implement comprehensive test coverage for all components
+   - Use TDD for new features and modifications
+   - Create integration tests to verify system behavior
+
+6. **Dependency Management**
+   - Audit and update dependencies for security and performance
+   - Minimize external dependencies where reasonable
+   - Document all third-party dependencies and licenses 
