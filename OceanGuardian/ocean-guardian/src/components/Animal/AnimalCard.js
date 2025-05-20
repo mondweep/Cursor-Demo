@@ -101,7 +101,7 @@ const AnimalCard = ({ animal }) => {
   
   return (
     <Card>
-      <AnimalImage image={image}>
+      <AnimalImage image={image ? `/images/${image}` : null}>
         <StatusBadge $rescued={rescued}>
           {rescued ? 'Rescued' : 'Needs Help'}
         </StatusBadge>

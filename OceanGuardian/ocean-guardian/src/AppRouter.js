@@ -2,12 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AnimalsPage from './pages/AnimalsPage';
-
-// Placeholder components for routes we haven't implemented yet
-const AnimalDetailPage = () => <div>Animal Detail Page</div>;
-const LearnPage = () => <div>Learn Page</div>;
-const ActionsPage = () => <div>Actions Page</div>;
-const RescueMissionPage = () => <div>Rescue Mission Page</div>;
+import AnimalDetailPage from './pages/AnimalDetailPage';
+import RescueMissionPage from './pages/RescueMissionPage';
+import LearnPage from './pages/LearnPage';
+import ActionsPage from './pages/ActionsPage';
 
 const AppRouter = () => {
   return (
